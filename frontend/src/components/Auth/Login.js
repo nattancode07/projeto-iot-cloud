@@ -7,6 +7,20 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Adicione a lógica de autenticação aqui
+    /*tentativa de fazer coneção n° 1*/
+     try {
+      Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/adm", "root", "an@2208");
+      Statement stmt = con.createStatement();
+      
+      ResultSet rs = stmt.executeQuery("SELECT * FROM usuario WHERE email='"+email+"' AND senha='"+password+"'");
+      if(rs.next()) {
+        JOptionPane.showMessageDialog(null, "Seja bem-vindo");
+    } else{
+        JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos");
+    }
+    } catch (Execption e) {
+      System.out.println(e); /* a letra e irá retornar se o código estiver funcionando */
+     }
   };
 
   return (
