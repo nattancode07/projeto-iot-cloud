@@ -1,0 +1,26 @@
+/* src/components/AdicionarDespesa/AdicionarDespesa.css */
+.adicionar-despesa {
+  margin: 20px;
+}
+
+.adicionar-despesa form {
+  display: flex;
+  flex-direction: column;
+}
+
+.adicionar-despesa input {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.adicionar-despesa button {
+  margin: 10px 0;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

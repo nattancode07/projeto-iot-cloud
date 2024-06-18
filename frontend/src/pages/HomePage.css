@@ -1,0 +1,26 @@
+/* src/pages/HomePage.css */
+.homepage {
+  /*display: flex;
+  flex-direction: column;*/
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Corrigir o Header para que seja visível */
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer para ficar no fundo */
+.footer {
+  text-align: center;
+  background: #4CAF50;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}

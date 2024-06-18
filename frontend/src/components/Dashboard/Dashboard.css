@@ -1,0 +1,17 @@
+/* src/components/Dashboard/Dashboard.css */
+.dashboard {
+  margin: 20px;
+}
+
+.total-despesas {
+  margin-bottom: 20px;
+}
+
+.categorias {
+  list-style: none;
+  padding: 0;
+}
+
+.categorias li {
+  margin: 5px 0;
+}

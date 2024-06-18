@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <style>
+      /* Reset básico */
+      * {
+        
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Garantir que a altura do html e body seja de 100% */
+      html, body {
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9; /* Cor de fundo global */
+      }
+      /* Configurar altura total e flex para o contêiner root */
+      #root {
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    </style>
     <meta
       name="description"
       content="Web site created using create-react-app"

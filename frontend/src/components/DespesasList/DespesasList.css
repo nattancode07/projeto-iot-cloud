@@ -1,0 +1,15 @@
+/* src/components/DespesasList/DespesasList.css */
+.despesas-list {
+  margin: 20px;
+}
+
+.despesas-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.despesas-list li {
+  margin: 5px 0;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}

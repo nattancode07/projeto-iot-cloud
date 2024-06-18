@@ -1,0 +1,11 @@
+.div-geral-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.div-login {
+  width: 400px;
+  height: 250px;
+}
