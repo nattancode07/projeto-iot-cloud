@@ -1,4 +1,3 @@
-// src/components/AdicionarDespesa/AdicionarDespesa.jsx
 import React, { useState } from 'react';
 import './AdicionarDespesa.css';
 

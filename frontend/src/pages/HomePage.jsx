@@ -23,6 +23,12 @@ const HomePage = () => {
     despesa.nome.toLowerCase().includes(filter.toLowerCase())
   );
 
+  const handleRemoveDespesa = (index) => {
+    const novasDespesas = [...despesas];
+    novasDespesas.splice(index, 1);
+    setDespesas(novasDespesas);
+  };
+
   return (
     <div className="homepage">
       <Header />
@@ -30,9 +36,9 @@ const HomePage = () => {
         <Dashboard />
         <Filtros onFilter={setFilter} />
         <AdicionarDespesa onAdd={handleAddDespesa} />
-        <DespesasList despesas={filteredDespesas} />
+        <DespesasList despesas={filteredDespesas} onRemove={handleRemoveDespesa}/>
       </main>
-      
+      <Footer/>
     </div>
   );
 };
