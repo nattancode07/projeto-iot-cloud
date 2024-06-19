@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useNavigate } from 'react-router-dom'; // Correta importação de useNavigate
+import axios from 'axios';
 import './Login.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     /*tentativa de fazer coneção n° 1*/
-   // try {
-    //  Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/adm", "root", "an@2208");
-    //  Statement stmt = con.createStatement();
-      
-    //  ResultSet rs = stmt.executeQuery("SELECT * FROM usuario WHERE email='"+email+"' AND senha='"+password+"'");
-    //  if(rs.next()) {
-    //    JOptionPane.showMessageDialog(null, "Seja bem-vindo");
-  //  } else{
-    //    JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos");
-   // }
-    //} catch (Execption e) {
-    //  System.out.println(e); /* a letra e irá retornar se o código estiver funcionando */
-    // } 
+    try {
+      const response = await axios.post('http://localhost:3001/login', {
+        email,
+        password
+      });
+
+      alert(response.data.message);
+      navigate('/dashboard'); // Redirecione para a página desejada após o login bem-sucedido
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        alert('Usuário ou senha incorretos');
+      } else {
+        console.error('Erro ao fazer login:', error);
+        alert('Erro ao fazer login');
+      }
+    }
   };
+
 
   return (
     <div className='div-geral-login'>
