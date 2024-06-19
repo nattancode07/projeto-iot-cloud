@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useNavigate } from 'react-router-dom'; // Correta importação de useNavigate
-import axios from 'axios';
+//import axios from 'axios';
 import './Login.css';
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,22 +11,22 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     /*tentativa de fazer coneção n° 1*/
-    try {
-      const response = await axios.post('http://localhost:3001/login', {
-        email,
-        password
-      });
+   // try {
+    //  const response = await axios.post('http://localhost:3001/login', {
+    //    email,
+    //    password
+     // });
 
-      alert(response.data.message);
-      navigate(HomePage); // Redirecione para a página desejada após o login bem-sucedido
-    } catch (error) {
-      if (error.response && error.response.status === 401) {
-        alert('Usuário ou senha incorretos');
-      } else {
-        console.error('Erro ao fazer login:', error);
-        alert('Erro ao fazer login');
-      }
-    }
+   //   alert(response.data.message);
+   ///   navigate(HomePage); // Redirecione para a página desejada após o login bem-sucedido
+  //  } catch (error) {
+  //    if (error.response && error.response.status === 401) {
+   //     alert('Usuário ou senha incorretos');
+   //   } else {
+     //   console.error('Erro ao fazer login:', error);
+       // alert('Erro ao fazer login');
+      //}
+    //}
   };
 
 
