@@ -18,7 +18,7 @@ const Login = () => {
       });
 
       alert(response.data.message);
-      navigate('/dashboard'); // Redirecione para a página desejada após o login bem-sucedido
+      navigate(HomePage); // Redirecione para a página desejada após o login bem-sucedido
     } catch (error) {
       if (error.response && error.response.status === 401) {
         alert('Usuário ou senha incorretos');
