@@ -85,12 +85,12 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Erro ao fazer login:', error);
-     /* if (error.response && error.response.status === 401) {
+     /*if (error.response && error.response.status === 401) {
         alert("Email ou senha inválidos. Tente novamente.");
       } else {
         alert("Ocorreu um erro ao tentar fazer login. Tente novamente mais tarde.");
-      }
-    }*/
+      }*/
+    
   };
 
   return (
@@ -116,7 +116,10 @@ const Login = () => {
         </form>
       </div>
     </div>
+
   );
+
+  };
 };
-}
+
 export default Login;
