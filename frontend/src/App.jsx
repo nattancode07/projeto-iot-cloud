@@ -32,6 +32,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/Login'; // Supondo que você tenha estas páginas
 import RegisterPage from './pages/Register';
+import axios from 'axios';
 
 const App = () => {
   return (
